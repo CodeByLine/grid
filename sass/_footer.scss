@@ -1,3 +1,13 @@
 .footer {
-    color: #fff;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+    background-color: #1d4680;
+    // color: rgb(233, 44, 44);
+
+    // &__text {color: orangered;}
 }
+
+// &__text {
+//     font-size: 20rem;
+// }
