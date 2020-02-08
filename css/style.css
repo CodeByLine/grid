@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: #fd9292; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  background-color: #cf1855;
+  grid-template-columns: 80vh min-content repeat(8, min-content);
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(8, 1fr); }
+
+.aae {
+  display: grid;
+  grid-column: 2 / -1;
+  background-color: #84099c; }
+
+.footer__foot {
+  font-size: 2rem; }
+
+.content {
+  background-color: yellow; }
+
+.header {
+  background-color: violet; }

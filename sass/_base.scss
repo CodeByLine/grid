@@ -1,0 +1,57 @@
+$color-red: #de2000;
+$color-blue: #1d4680;
+
+// $font-title: 'Nunito', sans-serif;
+// $font-main:  'Nunito', sans-serif;
+// $font-info: 'Nunito', sans-serif;
+
+//responsive breakpoints
+$bp-largest: 75em;  // 1200px
+$bp-large: 62.5em;  // 1000px
+$bp-medium: 50em;  // 800px
+$bp-small: 37.5em;  // 600px
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  // 10px/16px = 62.5% => 1rem = 10px 16px: browser default
+    color: rgb(253, 146, 146);
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    // font-family: $font-text;
+    // color: $color-grey-dark-2;
+    font-weight: 300;  // weight is included in html head
+    line-height: 1.6; 
+}
+
+.container {
+    display: grid;
+    background-color: #cf1855;
+    grid-template-columns: 80vh min-content repeat(8, min-content);  
+    grid-template-rows: repeat(3, 200px);
+    
+    //min-content == auto
+
+    // grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+
+    grid-template-columns: repeat(8, 1fr);
+    // [full-start] 1fr  [left-start] 1fr [left-end] [title-start] minmax(min-content, 14rem) [title-end] [right-start] 1fr [right-end] 1fr [full-end];
+}
+
+.aae {
+    display: grid;
+    grid-column: 2 / -1;
+    background-color: #84099c;
+}
