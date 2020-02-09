@@ -1,9 +1,8 @@
+
+
 $color-red: #de2000;
 $color-blue: #1d4680;
 
-// $font-title: 'Nunito', sans-serif;
-// $font-main:  'Nunito', sans-serif;
-// $font-info: 'Nunito', sans-serif;
 
 //responsive breakpoints
 $bp-largest: 75em;  // 1200px
@@ -24,33 +23,34 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;  // 10px/16px = 62.5% => 1rem = 10px 16px: browser default
     // color: rgb(253, 146, 146);
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 
-    // @media only screen and (max-width: $bp-largest) {
-    //     font-size: 50%;
-    // }
 }
 
 body {
-    // font-family: $font-text;
-    // color: $color-grey-dark-2;
+
     font-weight: 300;  // weight is included in html head
     line-height: 1.6; 
+    // display: grid;
+
 }
 
 .container {
     display: grid;
-    background-color: #eee;
-    grid-template-columns: 80vh min-content repeat(8, min-content);  
-    grid-template-rows: 3rem repeat(3, 200px) 6rem;
-    
-    //min-content == auto
-
-    // grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+    grid-template-rows: 2rem repeat(3, 1fr) 4rem;
+    background-image: url(../img/AAI_logo.png);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center;
+    height: 100vh;
+    font-family: sans-serif;
 
     grid-template-columns: repeat(12, 1fr);
-    // [full-start] 1fr  [left-start] 1fr [left-end] [title-start] minmax(min-content, 14rem) [title-end] [right-start] 1fr [right-end] 1fr [full-end];
-    grid-row-gap: 2rem;
-    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    
     
 & > * {
     align-content: center;
@@ -61,68 +61,107 @@ body {
     display: grid;
     grid-column: 2 / 5;
     grid-row: 2 / 3;
-    margin: 1rem;
-    background-color: #84099c;
+    padding: 2.5rem;
+    // background-color: #84099c;
     align-content: center;
+    .aae-img {
+        width: 100%;       
     
+        // @media only screen and (max-width: $bp-largest) {
+        //         width: 80%;
+        //     }
+
+        // @media only screen and (max-width: $bp-large) {
+        //     width: 75%;
+        // }
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     width: 50%;
+        // }
+
+    }
 }
+    
 
 .airc {
     display: grid;
     grid-column: 9 / 11;
-    background-color: #1766cc;
+    // background-color: #1766cc;
+    transform: translateX(-2rem);
+    .airc-img {
+        width: 100%;
+          
+    }
     
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    grid-column: 3 / span 7;
-    // grid-gap: 3rem;
-    // overflow: auto;
-    background-color: rgb(68, 59, 59);
-    font-size: 3rem;
-    line-height: 1.2;
+
+
+.aai {
+    display: grid;
+    grid-column: 2 / 5;
+    grid-row: 4 / 5;
+    padding: 1rem;
+    transform: translateY(-2rem);
+    // background-color: orangered;
+    .aai-img {
+        width: 100%;
+        
+    // @media only screen and (max-width: $bp-largest) {
+    //     width: 80%;
+    // }
+
+    // @media only screen and (max-width: $bp-large) {
+    //     width: 70%;
+    // }
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     width: 60%;
+    
+    // }
+
+    // @media only screen and (max-width: $bp-small) {
+    //     width: 50%;
+    
+    // }
+    }
+}
+
+.info {
+    display: grid;
+    grid-column: 8 / 11;
+    grid-row: 4 / 5;
+    // background-color: pink;
+    align-self: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: $color-blue;
+
+        @media only screen and (max-width: $bp-largest) {
+                font-size: 95%;
+            }
+
+ 
+}
+
+
+.title {
+    font-size: 4.7rem;
+    // display: grid;
+    font-weight: 500;
+    // display: flex;
+    grid-column: 5 / 8;
+    align-self: center;
+    justify-self: center;
 
     &__1 {
-        // display: grid;
-        margin-bottom: 3rem;
-        // font-size: 3rem;
-        // grid-row: 1 / 2;
-        // grid-column: subgrid;
-        
-        
-        // width: 90%;
-        // height: 10rem;
-        background-color: rgb(236, 49, 49);
+        color: $color-blue;
     }
 
     &__2 {
-        // display: flex;
-        // grid-gap: 3rem;
-        // height: 10rem;
-        grid-column: 1 / 7;
-        grid-row: 2 / 3;
-        // font-size: 3rem;
+        color: $color-red;
+    }
 
-        // justify-content: flex-end;
-        background-color: green;
     }
 }
 
-.aai {
-        display: grid;
-        grid-column: 2 / 5;
-        grid-row: 4 / 5;
-        background-color: orangered;
-    }
-
-.info {
-        display: grid;
-        grid-column: 8 / 11;
-        grid-row: 4 / 5;
-        background-color: pink;
-    }
-
-
-}
